@@ -3,22 +3,17 @@ info:
   title: Classic API Resource Documentation
   description: |
     <form>
-        
-            <html>
-
-            <body>
-
-              <p>Before the script...</p>
-
-              <script>
-                alert( 'Hello, world!' );
-              </script>
-
-              <p>...After the script.</p>
-
-            </body>
-
-            </html>
+        <math>
+            <mtext>
+                <img id=someImage>
+                    <script>
+                        function getImagePath(){
+                         return "images/image1.png";
+                       }
+                       document.onload = function(){
+                           document.getElementById('someImage').src=getImagePath();
+                       };
+                    </script>
     </form>
     <form>
         <mglyph>
