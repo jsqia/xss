@@ -51,6 +51,7 @@ paths:
             <div id="content">
                 <script type="text/javascript">
                     function myFunction() {
+                      debugger;
                       alert('ddddddd') 
                       console.log('yyyyy') 
                     }
