@@ -4,10 +4,6 @@
 		{
 			"url": "https://raw.githubusercontent.com/jsqia/xss/main/xss.yaml",
 			"name": "Testando 1"
-		},
-		{
-			"url": "https://raw.githubusercontent.com/jsqia/xss/main/xss.yaml",
-			"name": "Testando 2"
 		}
 	]
 }
