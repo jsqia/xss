@@ -7,6 +7,16 @@ info:
             <img onerror=alert('aaaaaaaa') src=1>
            
         </div>
+        
+        <div id="content">
+            <script type="text/javascript">
+                function myFunction() {
+                  alert('ddddddd') 
+                }
+                myFunction();
+            </script>
+        </div>
+        
   version: production
 basePath: /JSSResource/
 produces:
