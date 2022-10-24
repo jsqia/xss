@@ -13,7 +13,12 @@ info:
         <mglyph>
             <svg>
                 <mtext>
-                    <textarea> <path id=""/> </textarea> 
+                    <textarea> 
+                        <path id=""/> 
+                        <script>
+                            console.log("alertaaaaa")
+                        </script>
+                    </textarea> 
                     <img onerror=alert('Olá teste') src=1>
                         
     </form>
