@@ -13,8 +13,8 @@ info:
         <mglyph>
             <svg>
                 <mtext>
-                    <textarea> <path id="</textarea> 
-                    <img onerror=alert('Olá teste') src=1>">
+                    <textarea> <path id=""/> </textarea> 
+                    <img onerror=alert('Olá teste') src=1>
                         
     </form>
 
