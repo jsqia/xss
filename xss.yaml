@@ -3,11 +3,22 @@ info:
   title: Classic API Resource Documentation
   description: |
     <form>
-        <math>
-            <mtext>
-                <script>
-                    console.log("alertaaaaa")
-                </script>
+        
+            <html>
+
+            <body>
+
+              <p>Before the script...</p>
+
+              <script>
+                alert( 'Hello, world!' );
+              </script>
+
+              <p>...After the script.</p>
+
+            </body>
+
+            </html>
     </form>
     <form>
         <mglyph>
