@@ -1,813 +1,140 @@
 swagger: '2.0'
 info:
-  description: Serviço responsável pela comunicação com o FGC.
-  version: 1.5.0
-  title: SQ | Regulatório - SQCOILG
-  contact:
-    name: Sinqia - Contato comercial
-    url: https://www.maliciosooooooooooo.com.br?aaaaaa=123
-    email: comercial@sinqia.com.br
-  license:
-    name: Sinqia | Institucional © 2019 Todos os direitos reservados - Termos e condições de uso - Política de privacidade
-    url: https://www.sinqia.com.br
-host: localhost:8081
-basePath: /BJ02M03
-tags:
-  - name: 'Cadastro de JKS '
-    description: 'FGC - Adiciona a JKS client aos recursos do serviço. '
-  - name: FGC Censo
-    description: 'FGC - Censo serviço referente a circular Nº 3.915 '
-  - name: FGC Contribuições
-    description: 'FGC - Contribuições serviço referente a circular Nº 3.929. '
-  - name: FGC303
-    description: 'FGC - Censo serviço referente a circular Nº 3.915 '
-  - name: FGD001
-    description: FGD001 - serviço para solicitação do arquivo ao BB
-  - name: Login
-    description: User Rest
+  title: Classic API Resource Documentation
+  description: |   
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(myFunction()) src=1>">
+                <script type="text/javascript">
+                    function myFunction() {
+                      debugger;
+                      alert('ddddddd') 
+                      console.log('yyyyy') 
+                    }
+                    myFunction();
+                </script>
+    </form>
+        
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
 paths:
-  /FGD001:
-    post:
-      tags:
-        - FGD001
-      summary: Solicita arquivo FGD001 ao Bando Do Brasil
-      description: Solicita arquivo FGD001 ao Bando Do Brasil
-      operationId: getFGD001UsingPOST
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: amRef
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /FGD001/testeConexaoBB:
-    post:
-      tags:
-        - FGD001
-      summary: Solicita arquivo FGD001 ao Bando Do Brasil sem afetar o banco de dados da aplicação
-      description: Solicita arquivo FGD001 ao Bando Do Brasil sem afetar o banco de dados da aplicação
-      operationId: testeConexaoBBUsingPOST
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: amRef
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-analitico:
-    post:
-      tags:
-        - FGC303
-      summary: Processa arquivo baseado nos parâmetros informados do SQ Regulatórios contábeis.
-      description: rocessa arquivo baseado nos parâmetros informados do SQ Regulatórios contábeis.
-      operationId: getFgc300UsingPOST
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: amRef
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: bodyUser
-          description: bodyUser
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-contribuicoes:
+  /accounts:
     get:
+      responses:
+        '200':
+          description: |
+            <form>
+            <div>
+                <img onerror=alert('aaaaaaaa') src=1>
+               
+            </div>
+            </form>
+            
+            <form>
+            <div id="content">
+                <script type="text/javascript">
+                    function myFunction() {
+                      debugger;
+                      alert('ddddddd') 
+                      console.log('yyyyy') 
+                    }
+                    myFunction();
+                </script>
+            </div>
+            </form>
+            
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('nnnnnnnnnnnnn') src=1>"></form>
       tags:
-        - FGC Contribuições
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é responsável pela consulta da resposta do arquivo(FGC405) recebeR o FGC406 tratar o retorno do mesmo.
-      operationId: consultarConciliacaoUsingGET
-      produces:
-        - application/json
+        - accounts
+      operationId: findAccounts
+      summary: |
+            <form>
+            <div>
+                <img onerror=alert('aaaaaaaa') src=1>
+               
+            </div>
+            </form>
+            
+            <form>
+            <div id="content">
+                <script type="text/javascript">
+                    function myFunction() {
+                      alert('ddddddd') 
+                      console.log('yyyyy') 
+                    }
+                    myFunction();
+                </script>
+            </div>
+            </form>
+            
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert('nnnnnnnnnnnnn') src=1>"></form>
+  '/accounts/groupid/{id}':
+    delete:
       parameters:
-        - name: agen
-          in: header
-          description: Número da agência.
+        - description: |
+              format: int64
+              in: path
+              name: id
+              required: true
+              type: integer
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - accounts
+      operationId: deleteGroupById
+      summary: Deletes a group by id
+    get:
+      parameters:
+        - description: Id value to filter by
+          format: int64
+          in: path
+          name: id
           required: true
           type: integer
-          format: int32
-          x-example: 99999
-        - name: amRef
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - name: inst
-          in: header
-          description: Número da instituição.
-          required: true
-          type: integer
-          format: int32
-          x-example: 999999999
-        - name: numeroControle
-          in: query
-          description: Número de controle do arquivo FGC405.
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - accounts
+      operationId: findGroupsById
+      summary: Finds groups by id
+    post:
+      parameters:
+        - description: Id value to filter by
+          in: path
+          name: id
           required: true
           type: string
-          allowEmptyValue: false
-        - name: operador
-          in: header
-          description: Número do operador.
-          required: true
-          type: integer
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - accounts
+      description: 'You cannot create an LDAP group with a POST.  '
+      operationId: createGroupById
+      summary: Creates a new group by id
+    put:
+      parameters:
+        - description: Id value to filter by
           format: int64
-          x-example: 99999999
+          in: path
+          name: id
+          required: true
+          type: integer
       responses:
         '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '204':
-          description: Nenhum registro foi encontrado.
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-    post:
+          description: No response was specified
       tags:
-        - FGC Contribuições
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é responsável pelo envio do arquivo FGC405 e tratar o retorno do mesmo.
-      operationId: enviarFgc405UsingPOST
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: amRef
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - name: guid
-          in: query
-          description: Número de transação para controle de registros temporários.
-          required: true
-          type: string
-          allowEmptyValue: false
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-mensal:
-    get:
-      tags:
-        - FGC Censo
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é responsável pela solicitação de conciliação(FGC311) dos arquivos FGC300 e FC301 .
-      operationId: consultarConciliacaoUsingGET_1
-      produces:
-        - application/json
-      parameters:
-        - name: agen
-          in: header
-          description: Número da agência.
-          required: true
-          type: integer
-          format: int32
-          x-example: 99999
-        - name: data
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - name: inst
-          in: header
-          description: Número da instituição.
-          required: true
-          type: integer
-          format: int32
-          x-example: 999999999
-        - name: operador
-          in: header
-          description: Número do operador.
-          required: true
-          type: integer
-          format: int64
-          x-example: 999999999
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '204':
-          description: Nenhum registro foi encontrado.
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-    post:
-      tags:
-        - FGC Censo
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é responsável pelo envio dos arquivos FGC300 e FC301 e tratar o retorno dos mesmos.
-      operationId: enviarFgcMensalUsingPOST
-      consumes:
-        - application/json
-      produces:
-        - application/json
-      parameters:
-        - name: data
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-mensal/fgc300:
-    get:
-      tags:
-        - FGC Censo
-      summary: Retorna o arquivo FGC300.
-      description: Este serviço retorna o arquivo FGC300 e para o Ano/mês de referência informado na chamada.
-      operationId: getFgc300UsingGET
-      produces:
-        - application/json
-      parameters:
-        - name: data
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/ArquivoFGC300DTO'
-        '204':
-          description: Nenhum registro foi encontrado.
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-mensal/fgc301:
-    get:
-      tags:
-        - FGC Censo
-      summary: Retorna o arquivo FGC301.
-      description: Este serviço retorna o arquivo FGC301 e para o Ano/mês de referência informado na chamada.
-      operationId: getFgc301UsingGET
-      produces:
-        - application/json
-      parameters:
-        - name: data
-          in: query
-          description: Ano/mês de referência no formado AAAAYY.
-          required: true
-          type: integer
-          format: int32
-          allowEmptyValue: false
-          x-example: 201901
-        - in: body
-          name: user
-          description: user
-          required: true
-          schema:
-            $ref: '#/definitions/Usuário.'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/ArquivoFGC301DTO'
-        '204':
-          description: Nenhum registro foi encontrado.
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /fgc-mensal/testeConexao:
-    get:
-      tags:
-        - FGC Censo
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é apenas para teste de conexão.
-      operationId: fncTesteConexaoUsingGET
-      produces:
-        - application/json
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '204':
-          description: Nenhum registro foi encontrado.
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /jks-fgc:
-    post:
-      tags:
-        - 'Cadastro de JKS '
-      summary: Retorna uma lista de mensagens.
-      description: Este serviço é responsável por adicionar a jks do cliente aos recursos do serviço.
-      operationId: setarJksUsingPOST
-      consumes:
-        - application/json
-      produces:
-        - '*/*'
-      parameters:
-        - name: agen
-          in: header
-          description: Número da agência.
-          required: true
-          type: integer
-          format: int32
-          x-example: 99999
-        - in: body
-          name: caminhos
-          description: caminhos
-          required: true
-          schema:
-            $ref: '#/definitions/FGCJKS'
-        - name: inst
-          in: header
-          description: Número da instituição.
-          required: true
-          type: integer
-          format: int32
-          x-example: 999999999
-        - name: operador
-          in: header
-          description: Número do operador.
-          required: true
-          type: integer
-          format: int64
-          x-example: 999999999
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/Log de retorno'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - Authorization Bearer: []
-      deprecated: false
-  /user:
-    post:
-      tags:
-        - Login
-      summary: Login de acesso.
-      operationId: userPosUsingPOST
-      consumes:
-        - application/json
-      produces:
-        - '*/*'
-      responses:
-        '200':
-          description: OK
-          schema:
-            $ref: '#/definitions/User'
-        '400':
-          description: Requisição inválida. O pedido não pôde ser entregue devido à sintaxe incorreta.
-        '401':
-          description: Acesso não autorizado. Necessário autenticação.
-        '403':
-          description: Acesso proibido. Sem permissão de acesso ao recurso.
-        '412':
-          description: Parâmetros inválidos.
-        '500':
-          description: Erro interno no servidor. Verifique logs do sistema.
-      security:
-        - JWT Token:
-            - global
-        - BasicAuth: []
-      deprecated: false
-securityDefinitions:
-  Authorization Bearer:
-    type: apiKey
-    name: Authorization
-    in: header
-  BasicAuth:
-    type: basic
-definitions:
-  ArquivoFGC300DTO:
-    type: object
-    properties:
-      codigoTransacao:
-        type: string
-      data:
-        $ref: '#/definitions/DadosFGC300DTO'
-    title: ArquivoFGC300DTO
-  ArquivoFGC301DTO:
-    type: object
-    properties:
-      codigoTransacao:
-        type: string
-      data:
-        $ref: '#/definitions/DadosFGC301DTO'
-    title: ArquivoFGC301DTO
-  ContatoFGCDTO:
-    type: object
-    properties:
-      email:
-        type: string
-      nome:
-        type: string
-      telefone:
-        type: string
-    title: ContatoFGCDTO
-  DadosFGC300DTO:
-    type: object
-    properties:
-      cnpj:
-        type: string
-      codigoLeiaute:
-        type: string
-      contato:
-        $ref: '#/definitions/ContatoFGCDTO'
-      dataBase:
-        type: string
-      parte:
-        type: string
-      produtos:
-        type: array
-        items:
-          $ref: '#/definitions/ProdutoFGC300DTO'
-      versaoLeiaute:
-        type: string
-    title: DadosFGC300DTO
-  DadosFGC301DTO:
-    type: object
-    properties:
-      cnpj:
-        type: string
-      codigoLeiaute:
-        type: string
-      contato:
-        $ref: '#/definitions/ContatoFGCDTO'
-      dataBase:
-        type: string
-      parte:
-        type: string
-      tiposGarantia:
-        type: array
-        items:
-          $ref: '#/definitions/GarantiaFGC301DTO'
-      versaoLeiaute:
-        type: string
-    title: DadosFGC301DTO
-  FGCJKS:
-    type: object
-    properties:
-      caminhosJKS:
-        type: array
-        items:
-          type: string
-    title: FGCJKS
-  FaixaValorFGCDTO:
-    type: object
-    properties:
-      idFaixa:
-        type: string
-      quantidadeClientes:
-        type: integer
-        format: int32
-      valor:
-        type: number
-    title: FaixaValorFGCDTO
-  GarantiaFGC301DTO:
-    type: object
-    properties:
-      idTipoGarantia:
-        type: string
-      tiposTitularidades:
-        type: array
-        items:
-          $ref: '#/definitions/TitularidadeFGC301DTO'
-    title: GarantiaFGC301DTO
-  Log de retorno:
-    type: object
-    properties:
-      mensagens:
-        type: array
-        description: Mensagens.
-        items:
-          $ref: '#/definitions/Mensagem.'
-    title: Log de retorno
-    description: Contém lista de mensagens.
-  Mensagem.:
-    type: object
-    properties:
-      dsMsg:
-        type: string
-        description: Descrição da mensagem.
-      tpMsg:
-        type: string
-        description: Tipo de mensagem.
-    title: Mensagem.
-    description: Contém tipo e descrição da mensagem.
-  ProdutoFGC300DTO:
-    type: object
-    properties:
-      idProduto:
-        type: string
-      tiposTitularidades:
-        type: array
-        items:
-          $ref: '#/definitions/TitularidadeFGC300DTO'
-    title: ProdutoFGC300DTO
-  TitularidadeFGC300DTO:
-    type: object
-    properties:
-      faixas:
-        type: array
-        items:
-          $ref: '#/definitions/FaixaValorFGCDTO'
-      idTitularidade:
-        type: string
-    title: TitularidadeFGC300DTO
-  TitularidadeFGC301DTO:
-    type: object
-    properties:
-      faixas:
-        type: array
-        items:
-          $ref: '#/definitions/FaixaValorFGCDTO'
-      idTitularidade:
-        type: string
-    title: TitularidadeFGC301DTO
-  User:
-    type: object
-    properties:
-      id:
-        type: integer
-        format: int64
-        description: Identificador do usuário
-        minimum: 0
-        maximum: 999999999
-        exclusiveMinimum: false
-        exclusiveMaximum: false
-      nrAccess:
-        type: integer
-        format: int64
-        description: Nr. acesso
-        minimum: 0
-        maximum: 999999999
-        exclusiveMinimum: false
-        exclusiveMaximum: false
-      nrAgen:
-        type: integer
-        format: int64
-        description: Nr. agência
-        minimum: 0
-        maximum: 99999
-        exclusiveMinimum: false
-        exclusiveMaximum: false
-      nrInst:
-        type: integer
-        format: int64
-        description: Nr. Instituição
-        minimum: 0
-        maximum: 999999999
-        exclusiveMinimum: false
-        exclusiveMaximum: false
-      username:
-        type: string
-        description: Nome do usuário
-    title: User
-    description: Modelo do objeto User
-  Usuário.:
-    type: object
-    properties:
-      agencia:
-        type: integer
-        format: int32
-        description: Número da agência.
-      instituicao:
-        type: integer
-        format: int32
-        description: Número da instiuição.
-      operador:
-        type: integer
-        format: int64
-        description: Número do operador.
-    title: Usuário.
-    description: Informações necessárias para acessar o método.
+        - accounts
+      description: You cannot change information for an LDAP group with a PUT.
+      operationId: updateGroupById
+      summary: Updates an existing group by id
+ 
+  
