@@ -42,17 +42,11 @@ paths:
     delete:
       parameters:
         - description: |
-            <form>
-                <textarea> 
-                    <path id="" />
-                </textarea> 
-            </form>
-
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
+              format: int64
+              in: path
+              name: id
+              required: true
+              type: integer
       responses:
         '200':
           description: No response was specified
