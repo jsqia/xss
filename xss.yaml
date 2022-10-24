@@ -48,22 +48,6 @@ info:
                           </li>
                       </ul>
                   </div>
-
-                      <!-- Bootstrap Simple Sidebar: Page wrapper -->
-                      <div id="page-content-wrapper">
-                        <div id="message-bar" class="swagger-ui-wrap" data-sw-translate>&nbsp;</div>
-                        <div id="swagger-ui-container" class="swagger-ui-wrap"></div>
-                      </div>
-                    </div>
-
-                    <!-- Bootstrap Simple Sidebar: Menu Toggle Script -->
-                    <script>
-                    $("#menu-toggle").click(function(e) {
-                        e.preventDefault();
-                        $("#wrapper").toggleClass("toggled");
-                    });
-                    </script>
-                  </body>
         
   version: production
 basePath: /JSSResource/
